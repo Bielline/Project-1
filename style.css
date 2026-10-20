@@ -1,25 +1,54 @@
+/* Pengaturan latar belakang dan font untuk seluruh halaman */
 body {
-  background-color: #FFFAA0;
-  font-family: Arial, Sans-serif;
+  background-color: #FFFAA0; /* Warna kuning lembut */
+  font-family: Arial, sans-serif;
   color: #252525;
 }
 
+/* Desain kotak kartu profil */
 .kartu-profil {
   width: 300px;
-  margin: 50px auto;
+  margin: 50px auto; /* Membuat kartu berada tepat di tengah halaman */
   padding: 20px;
-  background-color: White;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0,1);
+  background-color: white;
+  border-radius: 15px; /* Membuat sudut kartu menjadi melengkung */
+  /* Diperbaiki dari rgba(0,0,0,0,1) menjadi rgba(0,0,0,0.1) agar efek bayangan lembut */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  text-align: center; /* Mengatur semua teks & tombol di dalam kartu agar di tengah */
 }
 
+/* Desain foto profil */
 .kartu-profil img {
   width: 150px;
-  border-redius: 50%;
+  height: 150px; /* Ditambahkan agar gambar tetap proporsional */
+  object-fit: cover;
+  /* Diperbaiki dari 'border-redius' menjadi 'border-radius' agar gambar berbentuk lingkaran sempurna */
+  border-radius: 50%; 
 }
 
-.kartu-profil {
-  /* ... (kode dari slide sebelumnya) ...*/
-  text-align: center;
+/* Desain tambahan untuk link agar lebih rapi */
+.kartu-profil a {
+  display: block;
+  margin: 15px 0;
+  color: #0066cc;
+  text-decoration: none;
 }
-  
+
+.kartu-profil a:hover {
+  text-decoration: underline;
+}
+
+/* Desain tombol sapaan */
+.kartu-profil button {
+  padding: 10px 15px;
+  background-color: #ff6b81;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.kartu-profil button:hover {
+  background-color: #ff4757;
+}
